@@ -1,0 +1,67 @@
+@function parseInt($n)
+	@return $n / ($n * 0 + 1)
+
+@mixin rem($property, $values)
+	$px: ()
+	$rem: ()
+
+	@each $value in $values
+
+		@if $value == 0 or $value == auto
+			$px: append($px, $value)
+			$rem: append($rem, $value)
+
+		@else
+			$unit: unit($value)
+			$val: parseInt($value)
+		
+			@if $unit == "px"
+				$px: append($px, $value)
+				$rem: append($rem, $val / 10 + rem)
+		
+			@if $unit == "rem"
+				$px: append($px, $val * 10 + px)
+				$rem: append($rem, $value)
+
+	@if $px == $rem
+		#{$property}: $px
+	
+	@else
+		#{$property}: $px
+		#{$property}: $rem
+
+@mixin dynamic-center-vertical
+	position: relative
+	top: 50%
+	@include transform(translate(0,-50%))
+
+@mixin optional-at-root($sel)
+	@at-root #{if(not &, $sel, selector-append(&, $sel))}
+		@content
+	
+@mixin input-placeholder
+	@include optional-at-root('::-webkit-input-placeholder')
+		@content  
+
+	@include optional-at-root(':-moz-placeholder')
+		@content  
+
+	@include optional-at-root('::-moz-placeholder')
+		@content  
+
+	@include optional-at-root(':-ms-input-placeholder')
+		@content
+
+@mixin clearfix
+	&:before,
+		&:after
+			content: ''
+			display: table
+
+		&:after
+			clear: both
+	
+@mixin calc($property, $expression)
+	#{$property}: -moz-calc(#{$expression})
+	#{$property}: -webkit-calc(#{$expression})
+	#{$property}: calc(#{$expression})

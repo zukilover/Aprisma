@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{title}}</title>
+
+    
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/chosen/chosen.css" />
+    <link rel="stylesheet" href="/bower_components/c3/c3.css" />
+    <!-- endbower -->
+    
+
+    <!-- Custom styles for this template -->
+    <!-- build:css(.) assets/styles/main.css -->
+    <link href="{{assets}}/styles/main.css" rel="stylesheet">
+    <!-- endbuild -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body data-ng-app="aprisma">
+
+    {{> body }}
+  
+    <!-- build:js(.) assets/scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script src="/bower_components/chosen/chosen.jquery.js"></script>
+    <script src="/bower_components/d3/d3.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="/bower_components/c3/c3.js"></script>
+    <script src="/bower_components/c3-angular/c3-angular.min.js"></script>
+    <script src="/bower_components/angular-resource/angular-resource.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+    <!-- build:js(.) assets/scripts/main.js -->
+    <script src="{{assets}}/scripts/main.js"></script>
+    <script src="{{assets}}/scripts/routes.js"></script>
+    <script src="{{assets}}/scripts/controllers/dashboard.js"></script>
+    <script src="{{assets}}/scripts/controllers/dashboard-balance-current.js"></script>
+    <script src="{{assets}}/scripts/controllers/dashboard-balance-loan.js"></script>
+    <script src="{{assets}}/scripts/controllers/cash-flow.js"></script>
+    <script src="{{assets}}/scripts/controllers/today-balance.js"></script>
+    <script src="{{assets}}/scripts/services/data.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

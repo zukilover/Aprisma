@@ -1,0 +1,137 @@
+
+
+
+<div class="container">
+	<h2 class="section-heading">Accounts Overview</h2>
+	<span class="section-subheading">Overview of all accounts</span>
+
+	<div class="section-single">
+		<div class="row row-flex">
+			<div class="col-sm-9">
+				<div class="panel panel-default">
+					<div class="panel-heading clearfix">
+						<h3 class="pull-left">Accounts Overview</h3>
+						<div class="pull-right">
+							<div class="inline-item">View total in</div>
+							<div class="inline-item">
+								<div class="dropdown">
+									<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+										IDR (Indonesian Rupiah)
+										<span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu">
+										<li><a href="#">IDR (Indonesian Rupiah)</a></li>
+										<li><a href="#">USD (US Dollar)</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-sm-6">
+								<h4 class="inner-heading">Total available Balance from Current &amp; Savings Account</h4>
+								<div data-ui-view="balance-current"></div>
+							</div>
+							<div class="col-sm-6">
+								<h4 class="inner-heading">Total available Balance from Loan Account</h4>
+								<div data-ui-view="balance-loan"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="panel panel-default">
+					<div class="panel-heading clearfix">
+						<h3 class="pull-left">What You Can Do</h3>
+						<div class="pull-right">
+							<span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+						</div>
+					</div>
+					<div class="panel-body">
+						<ul class="nav nav-pills nav-stacked">
+							<li><a href="">Today's Balance</a></li>
+							<li><a href="">Balance History</a></li>
+							<li><a href="">Account Statement</a></li>
+							<li><a href="">Monthly Account Statement</a></li>
+							<li><a href="">Accounts Reconciliation</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section-single">
+		<div class="panel panel-default">
+			<div class="panel-heading clearfix">
+				<h3 class="pull-left">Cash Flow</h3>
+				<div class="pull-right">
+					<span class="caret"></span>
+				</div>
+			</div>
+			<div class="panel-body">
+				<div class="clearfix">
+					<div class="inline-item">
+						<div class="inline-item">Currency</div>
+						<div class="inline-item">
+							<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+									IDR (Indonesian Rupiah)
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu">
+									<li><a href="#">IDR (Indonesian Rupiah)</a></li>
+									<li><a href="#">USD (US Dollar)</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="inline-item">
+						<div class="inline-item">Frequency</div>
+						<div class="inline-item">
+							<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+									Daily
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu">
+									<li><a href="#">Daily</a></li>
+									<li><a href="#">Monthly</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div data-ui-view="cash-flow"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section-single">
+		<div class="panel panel-default">
+			<div class="panel-heading clearfix">
+				<h3 class="pull-left">Today's Balance &#45; Indonesian Rupiah (IDR)</h3>
+				<div class="pull-right">
+					<span class="caret"></span>
+				</div>
+			</div>
+			<div class="panel-body">
+				<ul class="list-group">
+					<li class="list-group-item"><strong class="text-info">38 Accounts</strong> <strong>In Indonesian Rupiah (IDR)</strong></li>
+					<li class="list-group-item">Total Asset Amount: <strong>IDR 758,000,000.00</strong> <small>as of 17 Feb 2015, 09.00.05 WIB</small></li>
+				</ul>
+
+				<div class="table-head clearfix">
+					<small class="pull-right">Showing top 5 most frequently viewed accounts</small>
+				</div>
+
+				<div data-ui-view="today-balance"></div>
+			</div>
+		</div>
+	</div>
+</div>

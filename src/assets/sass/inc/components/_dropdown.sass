@@ -1,0 +1,55 @@
+div.chosen-container-single 
+  .switch-floor &
+    @include rem(font-size, 24px)
+
+    .chosen-single
+      height: 60px
+      line-height: 54px
+      @include rem(font-size, 24px)
+
+    .chosen-results
+      > li
+        padding: 24px
+        @include rem(font-size, 24px)
+
+  .chosen-single
+    background: get-color(clean)
+    border: 1px solid get-color(base)
+    height: 40px
+    line-height: 36px
+    padding-left: 15px
+    font-family: Lora, Georgia, serif
+    @include border-radius(0)
+    @include box-shadow(none)
+
+  &.chosen-with-drop
+    .chosen-single
+      border: 1px solid get-color(base)
+      background-image: none
+
+  .chosen-single span
+    margin-right: 22px
+
+  .chosen-single div
+    width: 22px
+    margin-right: 5px
+
+  .chosen-single div b
+    display: block
+    width: 100%
+    height: 100%
+    background: url(../images/global/dropdown.png) no-repeat center
+
+  .chosen-drop
+    border: 1px solid get-color(base)
+    border-top: none
+    @include border-radius(0)
+
+  .chosen-results 
+    li
+      padding: 12px
+      font-family: Lora, Georgia, serif
+
+      &.highlighted
+        background-color: get-color(secondary)
+        background-image: none

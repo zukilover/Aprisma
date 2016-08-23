@@ -1,0 +1,12 @@
+---
+layout: blank.hbs
+---
+
+
+	<c3chart 
+		bindto-id="balance-from-current" 
+		chart-data="balance.current.points" 
+		chart-columns="balance.current.columns"
+		sort-data=null>
+		<chart-tooltip value-format-function="balance.current.tooltip.value"/>
+	</c3chart>

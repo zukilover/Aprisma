@@ -1,0 +1,9 @@
+$colors: base #000000, clean #ffffff, seamless #ebebeb, mute #959595, alternate #444444, primary #0b5289, secondary #00aeef, highlight #f68b3f, inverse #415c71
+
+@function get-color($color-name)
+	@each $color in $colors
+		$key: nth($color, 1)
+		$value: nth($color, 2)
+
+		@if $key == $color-name
+			@return $value

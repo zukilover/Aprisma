@@ -1,0 +1,19 @@
+---
+layout: blank.hbs
+---
+
+
+	<c3chart 
+		bindto-id="cash-flow" 
+		chart-data="cashflow.points" 
+		chart-columns="cashflow.columns"
+		chart-x="cashflow.datax[0]"
+		sort-data=null>
+		<chart-axis>
+            <chart-axis-x axis-id="x" axis-type="category">
+                <chart-axis-x-tick/>
+            </chart-axis-x>
+            <chart-axis-y show=false></chart-axis-y>
+        </chart-axis>
+		<chart-tooltip value-format-function="cashflow.tooltip.value"/>
+	</c3chart>

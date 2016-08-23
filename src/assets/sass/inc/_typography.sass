@@ -1,0 +1,61 @@
+.typo-primary
+  font-family: 'Gotham Pro', Arial, sans-serif
+
+.text-xs
+  @include rem(font-size, 14px)
+
+.text-xxs
+  @include rem(font-size, 12px)
+
+.text-sm
+  @include rem(font-size, 16px)
+
+.text-md
+  @include rem(font-size, 18px)
+
+.text-lg
+  @include rem(font-size, 24px)
+
+.text-xl
+  @include rem(font-size, 30px)
+
+.text-xxl
+  @include rem(font-size, 60px)
+
+.text-bold
+  font-weight: 700
+
+.text-normal
+  font-weight: 500
+
+.text-light
+  font-weight: 300
+
+.text-italic
+  font-style: italic
+
+.text-uppercase
+  text-transform: uppercase
+
+.text-align-center
+  text-align: center
+
+.text-align-right
+  text-align: right
+
+body
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+@media only screen and (max-width: 767px)  
+  .text-md
+    @include rem(font-size, 15px)
+    
+  .text-lg
+    @include rem(font-size, 20px)
+
+  .text-xl
+    @include rem(font-size, 24px)
+
+  .text-xxl
+    @include rem(font-size, 40px)

@@ -1,0 +1,49 @@
+---
+layout: blank.hbs
+---
+
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Account Number</th>
+				<th>Account Name</th>
+				<th>Available Balance</th>
+				<th>Percentage of Total</th>
+				<th>Monthly Ending Balance</th>
+				<th>Account Statement</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr data-ng-repeat="item in details">
+				<td><span class="text-info">\{{item.account.no}}</span></td>
+				<td>\{{item.account.name}}</td>
+				<td>\{{item.balance.available | currency: ''}}</td>
+				<td>
+					<div class="progress">
+						<div class="progress-bar" style="width: \{{item.balance.available/total*100}}%;">
+							<span class="sr-only">\{{item.balance.available/total*100}}%</span>
+						</div>
+					</div>
+				</td>
+				<td class="column-monthly-ending">
+						<c3chart 
+							bindto-id="monthly-ending-\{{item.account.no}}" 
+							chart-data="monthlyEnding[$index].points" 
+							chart-columns="monthlyEnding[$index].columns"
+							sort-data=null>
+							<chart-bar ratio="0.9"/>
+							<chart-size chart-width=100 chart-height=40/>
+							<chart-axis>
+					            <chart-axis-x show=false></chart-axis-x>
+					            <chart-axis-y show=false axis-min=-50000000 axis-max=50000000></chart-axis-y>
+					        </chart-axis>
+					        <chart-legend show-legend=false></chart-legend>
+					        <chart-tooltip show-tooltip=false></chart-tooltip>
+						</c3chart>
+				</td>
+				<td>
+					<span class="glyphicon glyphicon-list-alt"></span>
+				</td>
+			</tr>
+		</tbody>
+	</table>

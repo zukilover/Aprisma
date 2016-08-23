@@ -1,0 +1,28 @@
+{
+	"balance" : [
+		{
+			"IDR" : {
+				"amount" : 5000000,
+				"percentage" : 17
+			},
+
+			"USD" : {
+				"amount" : 800,
+				"percentage" : 35
+			},
+
+			"JPY" : {
+				"amount" : 40000,
+				"percentage" : 15
+			},
+
+			"SGD" : {
+				"amount" : 1000,
+				"percentage" : 33
+			}
+		}],
+
+	"total" : {
+		"idr": 23500000
+	}
+}

@@ -1,0 +1,80 @@
+$brand-primary: #0E96C8
+$brand-info: #0E96C8
+$state-info-text: #0E96C8
+$border-radius-base: 0
+$headings-color: #444
+
+@import "compass/css3"
+@import "inc/mixins"
+@import "inc/theme"
+@import "inc/fonts"
+@import "inc/typography"
+@import "inc/layout"
+@import "inc/bootstrap-custom"
+@import "inc/components/buttons"
+@import "inc/components/dropdown"
+
+#{headings()}
+  margin: 0
+
+body,
+html
+  height: 100%
+
+body
+  font-family: 'Gotham Pro', Arial, sans-serif
+
+.column-monthly-ending
+  .c3-shape.c3-shape-0.c3-bar.c3-bar-0  
+    stroke: white!important
+    stroke-width: 2px!important
+
+.section-single
+  .row-flex
+    .panel
+      height: 100%  
+
+  .panel
+    margin-bottom: 0
+
+  + .section-single
+    margin-top: 30px  
+
+.section-heading
+  margin-top: 30px
+
+.section-subheading
+  margin-bottom: 15px
+  display: block
+
+.panel-heading
+  height: 54px
+
+  h3
+    font-weight: 700
+    text-transform: uppercase
+    letter-spacing: .05em
+    margin-top: 10px
+    margin-bottom: 0
+    @include rem(font-size, 16px)
+
+.inner-heading
+  font-weight: 700
+  text-align: center
+  margin-bottom: 15px
+  @include rem(font-size, 13px)    
+
+.table,
+.table.table-striped
+  > tbody
+    > tr
+      > td
+        vertical-align: middle
+        text-align: center
+
+        .progress
+          margin-bottom: 0  
+
+@media only screen and (max-width: 767px)  
+  img
+    max-width: 100%
