@@ -15,3 +15,11 @@
         </chart-axis>
 		<chart-tooltip value-format-function="cashflow.tooltip.value"/>
 	</c3chart>
+
+	<div class="center-block contain-button-helper">
+		<button class="btn btn-default" data-ng-click="renderGraph(); loading=true;">
+			<span data-ng-bind-html='
+				loading ? "Reloading&hellip;" : "Reload data <i class=\"glyphicon glyphicon-refresh\"></i>"'>
+			</span>
+		</button>
+	</div>

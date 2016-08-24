@@ -1,6 +1,7 @@
 var aprismaApp = angular.module('aprisma',
 	[
 		'ngResource',
+		'ngSanitize',
 		'ui.router',
 		'gridshore.c3js.chart'
 	]);

@@ -1,18 +1,19 @@
 aprismaApp.factory('DataService', function ($resource) {
+	var server = 'http://aprisma.06am.co/';
 	return {
-		balance_from_current: $resource('assets/scripts/data/balance_from_current.json', {}, {
+		balance_from_current: $resource(server + 'endpoint/balance_from_current.php', {}, {
 			'query': { method: 'GET'}
 		}),
-		balance_from_loan: $resource('assets/scripts/data/balance_from_loan.json', {}, {
+		balance_from_loan: $resource(server + 'endpoint/balance_from_loan.php', {}, {
 			'query': { method: 'GET'}
 		}),
-		cash_flow: $resource('assets/scripts/data/cash_flow.json', {}, {
+		cash_flow: $resource(server + 'endpoint/cash_flow.php', {}, {
 			'query': { method: 'GET'}
 		}),
-		todays_balance: $resource('assets/scripts/data/todays_balance.json', {}, {
+		todays_balance: $resource(server + 'endpoint/todays_balance.php', {}, {
 			'query': { method: 'GET'}
 		}),
-		monthly_ending: $resource('assets/scripts/data/monthly_ending.json', {}, {
+		monthly_ending: $resource(server + 'endpoint/monthly_ending.php', {}, {
 			'query': { method: 'GET'}
 		})
 	};

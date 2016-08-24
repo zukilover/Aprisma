@@ -14,6 +14,12 @@ aprismaApp
 			$scope.balance.current.data = null;
 			$scope.balance.current.points = [{"Loading": 100}];
 			$scope.balance.current.columns = [{"id":"Loading", "type":"donut"}];
+			$scope.colors = {
+				"IDR" : "#4C78A5",
+				"USD" : "#5A8CBF",
+				"JPY" : "#90ACD3",
+				"SGD" : "#C6CCE2"
+			};
 			$scope.balance.current.tooltip = {
 				value: function (value, ratio, id) {
 					var amount = $scope.balance.current.data.balance[0][id].amount;
@@ -23,28 +29,29 @@ aprismaApp
 
 			// get data service: 
 			// balance from current & savings account
-			DataService.balance_from_current.query().$promise.then(
-				function(data){ 
-					var point = {}, column, colors;
-					$scope.balance.current.columns = [];
-					$scope.balance.current.data = data;
-					colors = {
-						"IDR" : "#4C78A5",
-						"USD" : "#5A8CBF",
-						"JPY" : "#90ACD3",
-						"SGD" : "#C6CCE2"
-					};
-					for(var i in data.balance[0]) {
-						column = {
-							"id" : i,
-							"color" : colors[i],
-							"type" : "donut"
-						};
-						point[i] = data.balance[0][i].percentage;
-						$scope.balance.current.points[0] = (point);
-						$scope.balance.current.columns.push(column);
-					}
-			});
+			$scope.renderGraph = function() {
+	            DataService.balance_from_current.query().$promise.then(
+					function(data){ 
+						var point = {}, column;
+						$scope.balance.current.columns = [];
+						$scope.balance.current.data = data;
+						
+						for(var i in data.balance[0]) {
+							column = {
+								"id" : i,
+								"color" : $scope.colors[i],
+								"type" : "donut"
+							};
+							point[i] = data.balance[0][i].percentage;
+							$scope.balance.current.points[0] = (point);
+							$scope.balance.current.columns.push(column);
+						}
+
+						$scope.loading = false;
+				});
+	        };
+
+	        $scope.renderGraph();
 			
 
 	}])

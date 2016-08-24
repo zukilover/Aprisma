@@ -28,11 +28,15 @@ aprismaApp
 				}
 			};
 
-			// get data service
-			DataService.cash_flow.query().$promise.then(
-				function(data){ 
-					$scope.cashflow.points = data.cashFlow;
-			});
+			$scope.renderGraph = function() {
+	            DataService.cash_flow.query().$promise.then(
+					function(data){ 
+						$scope.cashflow.points = data.cashFlow;
+						$scope.loading = false;
+				});
+	        };
+
+	        $scope.renderGraph();
 			
 
 	}])

@@ -6321,6 +6321,14 @@ body {
   margin-bottom: 0;
 }
 
+.contain-button-helper {
+  text-align: center;
+  padding-top: 15px;
+}
+.contain-button-helper .btn {
+  outline: none;
+}
+
 @media only screen and (max-width: 767px) {
   img {
     max-width: 100%;
