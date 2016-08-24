@@ -4,10 +4,10 @@ aprismaApp
 		function ($scope, $filter, $state, $stateParams, DataService) {
 			$scope.todaysBalance = null;
 			$scope.details = null;
-			$scope.total = 0;
 			$scope.monthlyEnding = [];
 			
 			$scope.renderGraph = function() {
+				$scope.total = 0;
 	            DataService.todays_balance.query().$promise.then(
 					function(data){ 
 						$scope.todaysBalance = data;
